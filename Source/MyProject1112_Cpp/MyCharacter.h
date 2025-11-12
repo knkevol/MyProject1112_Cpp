@@ -52,4 +52,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void Look(float Pitch, float Yaw);
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Sprint")
+	uint8 bSprint : 1;
+
 };

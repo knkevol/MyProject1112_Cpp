@@ -4,14 +4,16 @@
 #include "MyAnimInstance.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "MyCharacter.h"
 
 void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 {
 	Super::NativeUpdateAnimation(DeltaSeconds);
 
-	ACharacter* Character = Cast<ACharacter>(TryGetPawnOwner());
+	AMyCharacter* Character = Cast<AMyCharacter>(TryGetPawnOwner());
 	if (Character)
 	{
 		GroundSpeed = Character->GetCharacterMovement()->Velocity.Size2D();
+		bSprint = Character->bSprint;
 	}
 }
