@@ -8,7 +8,6 @@
 #include "Camera/CameraComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
-#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 AMyCharacter::AMyCharacter()
@@ -72,3 +71,4 @@ void AMyCharacter::Look(float Pitch, float Yaw)
 	AddControllerYawInput(Yaw);
 
 }
+
